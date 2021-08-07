@@ -1,4 +1,8 @@
 /**
+ *Submitted for verification at BscScan.com on 2021-07-25
+*/
+
+/**
 
 MsX JSON-^9 ()
     
@@ -502,7 +506,7 @@ contract BabyShibaRocket is Context, IERC20, Ownable {
     constructor () {
         _rOwned[_msgSender()] = _rTotal;
         
-        IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0x10ED43C718714eb63d5aA57B78B54704E256024E); // pk swap router
+        IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0x10ED43C718714eb63d5aA57B78B54704E256024E); // pcs swap router
         uniswapV2Pair = IUniswapV2Factory(_uniswapV2Router.factory())
             .createPair(address(this), _uniswapV2Router.WETH());
 
@@ -954,6 +958,6 @@ contract BabyShibaRocket is Context, IERC20, Ownable {
         recipient.transfer(amount);
     }
     
-     //to recieve ETH from uniswapV2Router when swaping
+     //to receive ETH from uniswapV2Router when swapping
     receive() external payable {}
 }
